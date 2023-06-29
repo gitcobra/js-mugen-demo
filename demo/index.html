@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+<meta name="twitter:card" content="player" />
+<meta name="twitter:site" content="@zubizuba" />
+<meta name="twitter:title" content="JSMUGEN" />
+<meta name="twitter:description" content="test for JavaScript Implementation of MUGEN" />
+<meta name="twitter:image" content="https://gitcobra.github.io/jsmugen-demo/demo/image.png" />
+<meta name="twitter:player" content="https://gitcobra.github.io/jsmugen-demo/demo/fullscreen.html" />
+<meta name="twitter:player:width" content="640" />
+<meta name="twitter:player:height" content="480" />
+<title>MUGEN JS Demo</title>
+<style>
+    body {
+        background: black;
+        color: white;
+    }
+    img, canvas {
+        image-rendering: crisp-edges;
+        image-rendering: pixelated;
+    }
+    a {
+        text-decoration: none;
+    }
+    #footer button, #footer a {
+        font-size: xx-small;
+        margin: 0px 4px;
+    }
+</style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BGSBQKH9NT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BGSBQKH9NT');
+</script>
+
+<script defer src="bundle.js"></script></head>
+
+<body style="padding: 0px; margin: 0px;">
+<div id="game" style="margin:auto; width:640px; height: auto; max-width:100%; min-width:320px;">
+    <canvas id="gamecanvas" width="320" height="240" style="margin:0px; min-width:320px; max-width:100%; width: 640px; height: auto;"></canvas>
+</div>
+<div id="footer" style="display:flex; flex-wrap: nowrap; margin:auto; width:640px; max-width:100%; font-size:xx-small; text-align:right;">
+    <button id="btreset">RESET</button>
+    <button id="btload">LOAD ZIP</button>
+    <button id="btcolor">COLOR</button>
+    <button id="btpower">POWER</button>
+
+    <div style="display:flex; align-items: center; font-size: xx-small;">🔊<input id="basevol" style="width:50px;" type="range" value="0.1" min="0.0" max="1.0" step="0.01"></div>
+    <span style="flex-grow:1"></span>
+
+    <a href="fullscreen.html">▸fullscreen</a>
+</div>
+
+<input type="file" id="zipfile" accept=".zip" style="display:none;">
+</body>
+
+</html>
